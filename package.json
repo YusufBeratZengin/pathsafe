@@ -1,0 +1,55 @@
+{
+  "name": "pathsafe",
+  "version": "1.0.0",
+  "description": "Zero-dependency cross-platform path normalization, comparison, and traversal security library and CLI for Node.js",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "pathsafe": "bin/pathsafe.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./normalize": "./src/normalize.js",
+    "./resolve": "./src/resolve.js",
+    "./compare": "./src/compare.js",
+    "./security": "./src/security.js",
+    "./errors": "./src/errors.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:coverage": "node --test --experimental-test-coverage test/*.test.js",
+    "lint": "node --check bin/pathsafe.js src/*.js test/*.js",
+    "check": "npm run lint && npm test"
+  },
+  "keywords": [
+    "path",
+    "path-traversal",
+    "security",
+    "cross-platform",
+    "normalize",
+    "compare",
+    "posix",
+    "windows",
+    "sanitize",
+    "cli"
+  ],
+  "author": "Yusuf Berat Zengin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YusufBeratZengin/pathsafe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YusufBeratZengin/pathsafe/issues"
+  },
+  "homepage": "https://github.com/YusufBeratZengin/pathsafe#readme"
+}
